@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<style>  
+
+table {
+  max-height:500px;
+  align: center;
+  border: 1px solid black;
+  border-collapse: collapse;
+  table-layout:fixed;
+  width:50%;
+}
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input{
+  text-align:center;
+  align: center;
+  width: 40%;
+  padding: 2px 2px;
+  margin: 0 0;
+  display: inline-block;
+  border: 2px solid #ccc;
+  border-radius: 1000px;
+  box-sizing: border-box;
+  
+}
+button {
+  background-color: #080808; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+* {
+  box-sizing: border-box;
+}
+table,th, td {
+  border: 1px solid black;
+  text-align: center;
+  padding: 1px;
+}
+
+td[class='block']:nth-of-type(n) {background-color: #d8d8d8;}
+
+</style>
+</head>
+
+
+<body>
+<center><h1>Sudoku</h1></center>
+<div class="container p-3 my-3 border">
+<table class='table' align='center'>
+<form onSubmit='func()'>
+<tr name='row'><td name='cell1' class='block'><input type='number'></td><td name='cell1' class='block'><input type='number'></td><td name='cell1' class='block'><input type='number'></td><td name='cell1'><input type='number'></td><td name='cell1'><input type='number'></td><td name='cell1'><input type='number'></td><td name='cell1' class='block'><input type='number'></td><td name='cell1' class='block'><input type='number'></td><td name='cell1' class='block'><input type='number'></td></tr>
+<tr name='row'><td name='cell2' class='block'><input type='number'></td><td name='cell2' class='block'><input type='number'></td><td name='cell2' class='block'><input type='number'></td><td name='cell2'><input type='number'></td><td name='cell2'><input type='number'></td><td name='cell2'><input type='number'></td><td name='cell2' class='block'><input type='number'></td><td name='cell2' class='block'><input type='number'></td><td name='cell2' class='block'><input type='number'></td></tr>
+<tr name='row'><td name='cell3' class='block'><input type='number'></td><td name='cell3' class='block'><input type='number'></td><td name='cell3' class='block'><input type='number'></td><td name='cell3'><input type='number'></td><td name='cell3'><input type='number'></td><td name='cell3'><input type='number'></td><td name='cell3' class='block'><input type='number'></td><td name='cell3' class='block'><input type='number'></td><td name='cell3' class='block'><input type='number'></td></tr>
+<tr name='row'><td name='cell4'><input type='number'></td><td name='cell4'><input type='number'></td><td name='cell4'><input type='number'></td><td name='cell4' class='block'><input type='number'></td><td name='cell4' class='block'><input type='number'></td><td name='cell4' class='block'><input type='number'></td><td name='cell4'><input type='number'></td><td name='cell4'><input type='number'></td><td name='cell4'><input type='number'></td></tr>
+<tr name='row'><td name='cell5'><input type='number'></td><td name='cell5'><input type='number'></td><td name='cell5'><input type='number'></td><td name='cell5' class='block'><input type='number'></td><td name='cell5' class='block'><input type='number'></td><td name='cell5' class='block'><input type='number'></td><td name='cell5'><input type='number'></td><td name='cell5'><input type='number'></td><td name='cell5'><input type='number'></td></tr>
+<tr name='row'><td name='cell6'><input type='number'></td><td name='cell6'><input type='number'></td><td name='cell6'><input type='number'></td><td name='cell6' class='block'><input type='number'></td><td name='cell6' class='block'><input type='number'></td><td name='cell6' class='block'><input type='number'></td><td name='cell6'><input type='number'></td><td name='cell6'><input type='number'></td><td name='cell6'><input type='number'></td></tr>
+<tr name='row'><td name='cell7' class='block'><input type='number'></td><td name='cell7' class='block'><input type='number'></td><td name='cell7' class='block'><input type='number'></td><td name='cell7'><input type='number'></td><td name='cell7'><input type='number'></td><td name='cell7'><input type='number'></td><td name='cell7' class='block'><input type='number'></td><td name='cell7' class='block'><input type='number'></td><td name='cell7' class='block'><input type='number'></td></tr>
+<tr name='row'><td name='cell8' class='block'><input type='number'></td><td name='cell8' class='block'><input type='number'></td><td name='cell8' class='block'><input type='number'></td><td name='cell8'><input type='number'></td><td name='cell8'><input type='number'></td><td name='cell8'><input type='number'></td><td name='cell8' class='block'><input type='number'></td><td name='cell8' class='block'><input type='number'></td><td name='cell8' class='block'><input type='number'></td></tr>
+<tr name='row'><td name='cell9' class='block'><input type='number'></td><td name='cell9' class='block'><input type='number'></td><td name='cell9' class='block'><input type='number'></td><td name='cell9'><input type='number'></td><td name='cell9'><input type='number'></td><td name='cell9'><input type='number'></td><td name='cell9' class='block'><input type='number'></td><td name='cell9' class='block'><input type='number'></td><td name='cell9' class='block'><input type='number'></td></tr>
+
+</form>
+
+</table>
+<h3><center><button type="button" name="submit"  id='solve'>solve</button></center></h3>
+</div>
+<script type="text/javascript" src= 'Sudo.js'></script>
+</body>
+</html>
+
+ 
